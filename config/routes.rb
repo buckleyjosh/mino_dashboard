@@ -53,4 +53,8 @@ MinoDashboard::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  get "advertising/chartboost"
+  get "advertising/appfigures"
+  resources :advertising
+  
 end

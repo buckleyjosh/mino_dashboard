@@ -1,12 +1,14 @@
+<% provide(:title, 'Home') %>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Advertising test</title>
+    <title><%= full_title(yield(:title)) %></title>
   </head>
   <body>
     <h1>Advertising Page:</h1>
     <p>
-		<%= yield(:appfigures) %>
+		<%= yield(@output) %>	
+
     </p>
   </body>
 </html>

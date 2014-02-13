@@ -1,0 +1,13 @@
+Hello!
+
+<b>Total revenue:</b> $<%= @total_revenue%><br />
+<b>Total downloads:</b> <%= @total_downloads%><br />
+<hr />
+
+ <% @appfigures.sort.each do |date, value| %>
+
+Date: <%=value['date']%> | Downloads: <%=value['net_downloads']%> | Revenue: $<%=value['revenue']%><br />
+
+<% end %>
+
+

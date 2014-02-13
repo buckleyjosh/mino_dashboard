@@ -1,0 +1,21 @@
+<% provide(:title, 'Home') %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What <%= full_title(yield(:title)) %></title>
+  </head>
+  <body>
+    <p>
+		Chartboost data:
+
+		<% @chartboost.sort_by {|day| day['Date']}.each do |key|%>
+   
+<br /><br />
+<b><%=key['Date']%></b>: Spent: <%=key['Money Spent']%> | Received: <%=key['Installs Received']%><%=key%>
+	 <% end %>
+		
+		<br />total spend: $<%= @money_spent%>
+	
+    </p>
+  </body>
+</html>
